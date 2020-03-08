@@ -27,6 +27,8 @@ Der Abstand wird durch drei verschiedene Methoden wiedergegeben.
 
 ## Programm
 
+Das Programm sollte besser als separate Datei abgelegt werden!
+
 #include <LiquidCrystal.h> //LCD-Bibliothek laden
 
 //LCD

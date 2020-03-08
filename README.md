@@ -102,56 +102,89 @@ void loop() {
   
   if (entfernung >= 300 || entfernung <= 10) //Wenn die gemessene Entfernung über 300cm oder unter 10cm liegt,…
     {
+    
       lcd.setCursor(0, 0); //Startpositon auf dem LCD; erstes Zeichen, erste Zeile
+      
       lcd.print("Nicht messbar"); //Ausgabewert1
+      
       lcd.setCursor(0, 1); //Startpositon auf dem LCD; erstes Zeichen, zweite Zeile
+      
       lcd.println(""); //Ausgabewert2  
     }
+    
   else //  Ansonsten…
     {
+    
       lcd.setCursor(0, 0); //Startpositon auf dem LCD; erstes Zeichen, erste Zeile
+      
       lcd.print("Abstand"); //Ausgabewert1
+      
       lcd.setCursor(0, 1); //Startpositon auf dem LCD; erstes Zeichen, zweite Zeile
+      
       lcd.print(entfernung); //Ausgabewert2
+      
       lcd.println(" cm"); //Angabe der Einheit hinter dem Ausgabewert
     
     }
   
   if (entfernung < 300) {
+  
     digitalWrite(ledbl, HIGH); //Ansteuerung der LEDbl bei einem Abstand kleiner als 300
+    
     ton = 250; //Tonhöhe bei Abstand kleiner als 300
+    
 }
   else {
+  
     digitalWrite(ledbl,LOW); //keine Ansteuerung der LEDbl
+    
   }
 
-  if (entfernung < 100) {
+  if (entfernung < 100) 
+  {
+    
       digitalWrite(ledge, HIGH); //Ansteuerung der LEDge bei einem Abstand kleiner als 100
+      
       ton = 270; //Tonhöhe bei Abstand kleiner als 100
+      
 } 
+
   else {
+  
     digitalWrite(ledge, LOW); //keine Ansteuerung der LEDge
+    
 }
 
-  if (entfernung < 50) {
+  if (entfernung < 50) 
+  {
+  
     digitalWrite(ledrt, HIGH); //Ansteuerung der LEDrt bei einem Abstand kleiner als 50
+    
     ton = 300; //Tonhöhe bei Abstand kleiner als 50
+    
 }
-  else {
+  else 
+{
+  
     digitalWrite(ledrt,LOW); //keine Ansteuerung der LEDrt
 }
   
   
   
-  if (entfernung >= 300 || entfernung <= 10){
-     noTone(buzzer); //kein Ton im ausgewählten Bereich
+  if (entfernung >= 300 || entfernung <= 10)
+  {
+  
+  noTone(buzzer); //kein Ton im ausgewählten Bereich
+  
   }
-  else {
+  else 
+  {
+  
      tone(buzzer, ton); //Tonwiedergabe wenn im ausgewählten Bereich
   }
   
   
   delay(500); //Messwerterfassung ca. jede halbe Sekunde
   
-}
+  }
   

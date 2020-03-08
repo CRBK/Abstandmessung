@@ -103,6 +103,7 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
  
   
   if (entfernung >= 300 || entfernung <= 10) //Wenn die gemessene Entfernung über 300cm oder unter 10cm liegt,…
+  
   {   
       lcd.setCursor(0, 0); //Startpositon auf dem LCD; erstes Zeichen, erste Zeile     
       lcd.print("Nicht messbar"); //Ausgabewert1      
@@ -111,6 +112,7 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
   }
     
   else //  Ansonsten…
+  
   {    
       lcd.setCursor(0, 0); //Startpositon auf dem LCD; erstes Zeichen, erste Zeile
       lcd.print("Abstand"); //Ausgabewert1      
@@ -125,7 +127,9 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
     ton = 250; //Tonhöhe bei Abstand kleiner als 300 
     
   }
+  
   else 
+  
   {  
     digitalWrite(ledbl,LOW); //keine Ansteuerung der LEDbl    
   }
@@ -136,11 +140,15 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
     ton = 270; //Tonhöhe bei Abstand kleiner als 100
     
   }
+  
   else 
+  
   {  
     digitalWrite(ledge, LOW); //keine Ansteuerung der LEDge    
   }
+  
   if (entfernung < 50) 
+  
   {  
     digitalWrite(ledrt, HIGH); //Ansteuerung der LEDrt bei einem Abstand kleiner als 50    
     ton = 300; //Tonhöhe bei Abstand kleiner als 50
@@ -150,14 +158,17 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
   { 
     digitalWrite(ledrt,LOW); //keine Ansteuerung der LEDrt
     
-  }      
+  } 
+  
   if (entfernung >= 300 || entfernung <= 10)
+  
   {  
     noTone(buzzer); //kein Ton im ausgewählten Bereich
     
   }
   
   else 
+  
   {  
     tone(buzzer, ton); //Tonwiedergabe wenn im ausgewählten Bereich
     

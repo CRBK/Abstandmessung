@@ -101,14 +101,10 @@ void loop() {
  
   
   if (entfernung >= 300 || entfernung <= 10) //Wenn die gemessene Entfernung über 300cm oder unter 10cm liegt,…
-    {
-    
-      lcd.setCursor(0, 0); //Startpositon auf dem LCD; erstes Zeichen, erste Zeile
-      
-      lcd.print("Nicht messbar"); //Ausgabewert1
-      
-      lcd.setCursor(0, 1); //Startpositon auf dem LCD; erstes Zeichen, zweite Zeile
-      
+    {   
+      lcd.setCursor(0, 0); //Startpositon auf dem LCD; erstes Zeichen, erste Zeile     
+      lcd.print("Nicht messbar"); //Ausgabewert1      
+      lcd.setCursor(0, 1); //Startpositon auf dem LCD; erstes Zeichen, zweite Zeile      
       lcd.println(""); //Ausgabewert2  
     }
     

@@ -122,10 +122,10 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
   }
   
   if (entfernung < 300)
+  
   {  
     digitalWrite(ledbl, HIGH); //Ansteuerung der LEDbl bei einem Abstand kleiner als 300    
-    ton = 250; //Tonhöhe bei Abstand kleiner als 300 
-    
+    ton = 250; //Tonhöhe bei Abstand kleiner als 300  
   }
   
   else 
@@ -135,10 +135,10 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
   }
 
   if (entfernung < 100) 
+  
   {    
     digitalWrite(ledge, HIGH); //Ansteuerung der LEDge bei einem Abstand kleiner als 100      
-    ton = 270; //Tonhöhe bei Abstand kleiner als 100
-    
+    ton = 270; //Tonhöhe bei Abstand kleiner als 100    
   }
   
   else 
@@ -151,28 +151,28 @@ digitalWrite(trigger, LOW); //Hier nimmt man die Spannung für kurze Zeit vom Tr
   
   {  
     digitalWrite(ledrt, HIGH); //Ansteuerung der LEDrt bei einem Abstand kleiner als 50    
-    ton = 300; //Tonhöhe bei Abstand kleiner als 50
-    
+    ton = 300; //Tonhöhe bei Abstand kleiner als 50    
   }
+  
   else 
+  
   { 
-    digitalWrite(ledrt,LOW); //keine Ansteuerung der LEDrt
-    
+    digitalWrite(ledrt,LOW); //keine Ansteuerung der LEDrt    
   } 
   
   if (entfernung >= 300 || entfernung <= 10)
   
   {  
-    noTone(buzzer); //kein Ton im ausgewählten Bereich
-    
+    noTone(buzzer); //kein Ton im ausgewählten Bereich    
   }
   
   else 
   
   {  
-    tone(buzzer, ton); //Tonwiedergabe wenn im ausgewählten Bereich
-    
+    tone(buzzer, ton); //Tonwiedergabe wenn im ausgewählten Bereich    
   }  
-  delay(500); //Messwerterfassung ca. jede halbe Sekunde  
+  
+  delay(500); //Messwerterfassung ca. jede halbe Sekunde 
+  
 }
   

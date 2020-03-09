@@ -34,7 +34,6 @@ pinMode(buzzer, OUTPUT); //Buzzer-Pin ist ein Ausgang
 pinMode(ledbl, OUTPUT); //LEDbl-Pin ist ein Ausgang
 pinMode(ledge, OUTPUT); //LEDge-Pin ist ein Ausgang
 pinMode(ledrt, OUTPUT); //LEDrt-Pin ist ein Ausgang
-
 }
 
 void loop()
